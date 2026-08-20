@@ -1,6 +1,10 @@
 import torch
 from torchvision import transforms
-from model import IMG_SIZE, IMAGENET_MEAN, IMAGENET_STD
+
+try:
+    from .model import IMG_SIZE, IMAGENET_MEAN, IMAGENET_STD
+except ImportError:
+    from model import IMG_SIZE, IMAGENET_MEAN, IMAGENET_STD
 
 # Replicate grayscale -> 3ch, resize to backbone's expected input, ImageNet-normalize.
 inference_transform = transforms.Compose(

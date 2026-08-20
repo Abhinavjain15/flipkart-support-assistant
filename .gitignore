@@ -6,3 +6,10 @@ venv/
 .ipynb_checkpoints/
 data/fashion_mnist/
 *.pt.tmp
+# Part 2 intermediate artifacts (regenerable, not required deliverables)
+part2_image_classifier/cached_features.pt
+part2_image_classifier/head_feature_extraction.pt
+part2_image_classifier/data/
+
+# editor config
+pyrightconfig.json
