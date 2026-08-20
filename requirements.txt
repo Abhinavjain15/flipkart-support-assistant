@@ -1,0 +1,35 @@
+# Core data science
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.4.2
+scipy==1.13.0
+
+# Part 2 -- deep learning / transfer learning
+# NOTE (Windows): install torch/torchvision separately with the CPU index to avoid
+# DLL/version-mismatch errors (see install command below), then comment these two
+# lines out before running `pip install -r requirements.txt`.
+torch==2.3.0
+torchvision==0.18.0
+
+# Part 3 -- RAG + agent
+sentence-transformers==2.7.0
+faiss-cpu==1.8.0
+langgraph==0.1.5
+langchain-core==0.2.5
+
+# Explainability (Part 1 Task 7)
+shap==0.45.1
+
+# Utilities
+Pillow==10.3.0
+matplotlib==3.8.4
+joblib==1.4.2
+
+# ---------------------------------------------------------------------------
+# Recommended install order (especially on Windows, to avoid the
+# "operator torchvision::nms does not exist" / WinError 126 issues):
+#
+#   pip install torch==2.3.0 torchvision==0.18.0 \
+#       --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements.txt
+# ---------------------------------------------------------------------------
