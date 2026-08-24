@@ -4,7 +4,7 @@ from PIL import Image
 from torchvision import datasets
 from data_loader import CLASS_NAMES
 
-# Export real test-split images (raw IDX -> actual .png files) for Part 3's tool.
+# Export real test-split images (raw IDX -> actual .png files).
 raw_test = datasets.FashionMNIST(
     root="./data/fashion_mnist", train=False, download=True
 )
