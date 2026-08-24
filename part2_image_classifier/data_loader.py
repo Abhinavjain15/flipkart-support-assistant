@@ -22,8 +22,6 @@ CLASS_NAMES = [
 
 
 def load_fashion_mnist(root="./data/fashion_mnist", val_size=5000):
-    # Raw tensors only here; ImageNet normalization/resizing is applied later
-    # by the backbone-specific preprocessing pipeline (Part 2 Task 2).
     base_transform = transforms.ToTensor()
 
     full_train = datasets.FashionMNIST(
