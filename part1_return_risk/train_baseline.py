@@ -11,7 +11,7 @@ baseline = Pipeline(
         ("clf", DummyClassifier(strategy="most_frequent", random_state=42)),
     ]
 )
-baseline.fit(X_train, y_train)  # preprocessor fit on train only, not test
+baseline.fit(X_train, y_train)
 preds = baseline.predict(X_test)
 
 acc = accuracy_score(y_test, preds)
