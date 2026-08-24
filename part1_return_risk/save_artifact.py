@@ -22,7 +22,6 @@ final_pipe = Pipeline(
 )
 final_pipe.fit(X_train, y_train)
 
-# Re-run Task 5's threshold-sweep procedure, but on THIS model's own predict_proba
 rf_proba = final_pipe.predict_proba(X_test)[:, 1]
 thresholds = np.arange(0.10, 0.901, 0.02)
 
@@ -43,7 +42,7 @@ os.makedirs("../models", exist_ok=True)
 joblib.dump(final_pipe, "../models/return_risk_model.pkl")
 print("\nSaved: models/return_risk_model.pkl")
 
-# Sanity check: reload and confirm predict_proba matches
+# Sanity check
 reloaded = joblib.load("../models/return_risk_model.pkl")
 reloaded_proba = reloaded.predict_proba(X_test)[:, 1]
 assert np.allclose(rf_proba, reloaded_proba), "Reloaded model output mismatch!"
